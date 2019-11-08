@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_URL } from '../store/constants';
+import { API_URL } from './api-constants';
 
 export const getData = async() => {
   const response = await axios.get(API_URL);

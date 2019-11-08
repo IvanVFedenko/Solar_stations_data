@@ -2,12 +2,12 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-import { set_data_reducer } from './redusers/get_data_reducer';
+import { get_data_reducer } from './redusers/get-data-reducer';
 
-export const data = ({ setData }: any) => setData.data;
+export const data = ({ state }: any) => state;
 
 const rootReducer = combineReducers({
-	setData: set_data_reducer,
+	getData: get_data_reducer,
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

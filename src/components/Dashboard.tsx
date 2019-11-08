@@ -4,14 +4,20 @@ import { data } from '../store/store';
 import { getDataThunk } from '../store/actions';
 
 const Dashboard: React.FC = (props: any ) => {
-  useEffect(() => { props. getDataThunk() }, []);
+  // useEffect(() => { 
+  //   const interval = setInterval (() => 
+  //     {props.getDataThunk() }, 50000);
+  //     return () => clearInterval(interval);
+  // }, []);
+
+  useEffect(() => { props.getDataThunk() }, []);
   return (
     <h3>This is dashboardComponent</h3>
   );
 }
 
 const mapStatetoProps = (state: any) => ({
-data: data(state),
+  data: data(state),
 });
 
 const mapDispatchToProps = {
