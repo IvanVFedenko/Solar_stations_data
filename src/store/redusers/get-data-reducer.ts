@@ -2,7 +2,7 @@ import { SET_DATA } from '../constants';
 import { MyStore, ActionType, Set_Data } from '../../types/index';
 
 
-const initialState: MyStore = {
+const initialState = {
  // payload: {
     data: [
       {
